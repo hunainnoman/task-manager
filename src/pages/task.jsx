@@ -35,12 +35,11 @@ const TaskForm = (props) => {
     e.preventDefault();
     setModal(false);
 
-    // Add the new task to the tasks list
     setTasks([
       ...tasks,
       { title, description, completed: false, createdBy: userData.name },
     ]);
-    // Clear the form fields
+    // Clear fields
     setTitle("");
     setDescription("");
     setIsLoading(true);
@@ -50,7 +49,7 @@ const TaskForm = (props) => {
   };
 
   const handleTaskStatusChange = (index, completed) => {
-    // Update the completed status of the task at the specified index
+    // Update the status of the task at the specified index
     const updatedTasks = [...tasks];
     updatedTasks[index].completed = completed;
     setTasks(updatedTasks);

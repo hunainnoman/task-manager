@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "./App.css";
 import TaskForm from "../pages/task";
 import Loader from "../components/Loader";
 
